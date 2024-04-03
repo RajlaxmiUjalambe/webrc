@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motor Control</title>
+</head>
+<body>
+    <h1>Control Motor</h1>
+    <button id="forwardBtn">Forward</button>
+    <button id="backwardBtn">Backward</button>
+    <button id="leftBtn">Left</button>
+    <button id="rightBtn">Right</button>
+    <button id="stopBtn">Stop</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#forwardBtn").click(function(){
+                $.get("/forward");
+            });
+
+            $("#backwardBtn").click(function(){
+                $.get("/backward");
+            });
+
+            $("#leftBtn").click(function(){
+                $.get("/left");
+            });
+
+            $("#rightBtn").click(function(){
+                $.get("/right");
+            });
+
+            $("#stopBtn").click(function(){
+                $.get("/stop");
+            });
+        });
+    </script>
+</body>
+</html>
